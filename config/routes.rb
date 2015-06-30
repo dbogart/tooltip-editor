@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get :token, controller: 'application'
+
   resources :state_tooltips, except: [:new, :edit]
   resources :states, except: [:new, :edit]
   resources :tooltips, except: [:new, :edit]

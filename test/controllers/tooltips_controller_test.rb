@@ -13,7 +13,7 @@ class TooltipsControllerTest < ActionController::TestCase
 
   test "should create tooltip" do
     assert_difference('Tooltip.count') do
-      post :create, tooltip: { definiton: @tooltip.definiton, term: @tooltip.term, updated_by: @tooltip.updated_by }
+      post :create, tooltip: { definition: @tooltip.definition, term: @tooltip.term, updated_by: @tooltip.updated_by }
     end
 
     assert_response 201
@@ -25,7 +25,7 @@ class TooltipsControllerTest < ActionController::TestCase
   end
 
   test "should update tooltip" do
-    put :update, id: @tooltip, tooltip: { definiton: @tooltip.definiton, term: @tooltip.term, updated_by: @tooltip.updated_by }
+    put :update, id: @tooltip, tooltip: { definition: @tooltip.definition, term: @tooltip.term, updated_by: @tooltip.updated_by }
     assert_response 204
   end
 

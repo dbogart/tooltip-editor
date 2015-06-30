@@ -2,10 +2,10 @@
 
 one:
   term: MyString
-  definiton: MyText
+  definition: MyText
   updated_by: MyString
 
 two:
   term: MyString
-  definiton: MyText
+  definition: MyText
   updated_by: MyString

@@ -18,7 +18,7 @@ class TooltipsController < ApplicationController
   # POST /tooltips
   # POST /tooltips.json
   def create
-    @tooltip = Tooltip.new(tooltip_params)
+    @tooltip = State.find_by(name: tooltip_params[:state_name]).tooltips.create(term: tooltip_params[:term], definition: tooltip_params[:definition], updated_by: tooltip_params[:updated_by])
 
     if @tooltip.save
       render json: @tooltip, status: :created, location: @tooltip
@@ -54,6 +54,6 @@ class TooltipsController < ApplicationController
     end
 
     def tooltip_params
-      params.require(:tooltip).permit(:term, :definiton, :updated_by)
+      params.require(:tooltip).permit(:term, :definition, :updated_by, :state_name)
     end
 end
