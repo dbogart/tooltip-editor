@@ -5,6 +5,11 @@ class ApplicationController < ActionController::API
 
   before_filter :authenticate_user_from_token, except: [:token]
 
+  # responses returned as an array rather than object with a key
+  def default_serializer_options
+    { root: false }
+  end
+
   def token
     authenticate_with_http_basic do |email, password|
       user = User.find_by(email: email)

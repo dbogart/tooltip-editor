@@ -5,6 +5,8 @@ gem 'rails', '4.2.3'
 
 gem 'rails-api'
 
+gem 'rack-cors', '~> 0.3.1'
+
 gem 'spring', :group => :development
 
 gem 'pg'
