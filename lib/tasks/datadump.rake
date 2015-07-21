@@ -17,7 +17,7 @@ namespace :json do
 
         end
 
-        if tooltipCollection.length > 5
+        if tooltipCollection.length > 2
           file = File.open(File.join(Rails.root, "db", "export", "tooltip.constants.js"), 'w')
           file.write "(function () { \n 'use strict'; \n var Tooltip = "
           file.write JSON.pretty_generate(tooltipCollection)
