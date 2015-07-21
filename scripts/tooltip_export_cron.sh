@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export RAILS_ENV=production
 JS_FILE="db/export/tooltip.constants.js"
 JS_LINT="$JS_FILE --white --passfail --predef angular"
 DEST_HOST="dev.adverseevents.io"
